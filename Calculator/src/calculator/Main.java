@@ -6,20 +6,29 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		int firstNumber;
+		int secondNumber;
+		int result = 0;
+		
 			try(Scanner sc = new Scanner(System.in)) {
 			
 			System.out.println("Enter your first number");
-			int firstNumber = sc.nextInt();
+			firstNumber = sc.nextInt();
 			
 			System.out.println("Choose your operation +, -, * ,/ ");
 			String operation = sc.next();
 			
 			System.out.println("Enter your second number");
-			int secondNumber = sc.nextInt();
-
-			System.out.println("Now the system is calculating the result ...");
-			int result = 0;
+			secondNumber = sc.nextInt();
 			
+			if (operation.equals("/") && secondNumber == 0) {				
+				
+				System.out.println("Divide with 0 can't be calculated.");
+			
+				System.out.println("Enter your second number again: ");
+	
+				secondNumber = sc.nextInt();
+			}
 			if(operation.equals("+")) {
 				result = firstNumber + secondNumber;
 			} 

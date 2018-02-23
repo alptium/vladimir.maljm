@@ -2,14 +2,11 @@ package calculator;
 
 import java.util.Scanner;
 
-public class Main 
-{
+public class Main {
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		
-		try(Scanner sc = new Scanner(System.in)) 
-		{
+			try(Scanner sc = new Scanner(System.in)) {
 			
 			System.out.println("Enter your first number");
 			int firstNumber = sc.nextInt();
@@ -23,26 +20,20 @@ public class Main
 			System.out.println("Now the system is calculating the result ...");
 			int result = 0;
 			
-			if(operation.equals("+")) 
-			{
+			if(operation.equals("+")) {
 				result = firstNumber + secondNumber;
 			} 
-			else if(operation.equals("-")) 
-			{
+			else if(operation.equals("-")) {
 				result = firstNumber - secondNumber;
 			} 
-			else if(operation.equals("*")) 
-			{
+			else if(operation.equals("*")) {
 				result = firstNumber * secondNumber;		
 			} 
-			else if(operation.equals("/")) 
-			{
+			else if(operation.equals("/")) {
 				result = firstNumber / secondNumber;			
 			}
 			
 			System.out.println("The result for " + firstNumber + " " + operation + " " + secondNumber + " is " + result);
-		}
-		
+			}
 	}
-
 }

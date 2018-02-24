@@ -32,8 +32,9 @@ public class Main {
 					System.out.println("Student " + students[i] + " " + " has grade " + grades[i]);
 					totalGrade += grades[i];
 				}
-				
+				double middleGrade = totalGrade / numberOfStudents;
 				System.out.println("Total grade of your students is: " + totalGrade);
+				System.out.println("Middle grade of your students is: " + middleGrade);
 			}
 	}
 }

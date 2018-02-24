@@ -4,9 +4,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-				int firstNumber;
-				int secondNumber;
-				int result = 0;
+				double firstNumber;
+				double secondNumber;
+				double result = 0;
 				
 					try(Scanner sc = new Scanner(System.in)) {
 					
@@ -27,7 +27,7 @@ public class Main {
 			
 						secondNumber = sc.nextInt();
 					}
-					if(operation.equals("+")) {
+					else if(operation.equals("+")) {
 						result = firstNumber + secondNumber;
 					} 
 					else if(operation.equals("-")) {

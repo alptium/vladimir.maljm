@@ -33,7 +33,7 @@ public class Main {
 				}
 				double averageGrade = totalGrade / numberOfStudents;
 				System.out.println("Total grade of your students is: " + totalGrade);
-				System.out.println("Middle grade of your students is: " + averageGrade);
+				System.out.println("Average grade of your students is: " + averageGrade);
 			}
 	}
 

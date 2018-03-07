@@ -3,10 +3,9 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-
-		double firstNumber;
-		double secondNumber;
-		double result = 0;
+		int firstNumber;
+		int secondNumber;
+		int result = 0;
 				
 		try(Scanner sc = new Scanner(System.in)) {
 					
@@ -39,4 +38,5 @@ public class Main {
 		System.out.println("The result for " + firstNumber + " " + operation + " " + secondNumber + " is " + result);
 		}
 	}
+
 }

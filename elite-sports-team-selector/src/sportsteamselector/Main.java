@@ -81,7 +81,7 @@ public class Main {
 				}
 			}
 			System.out.println("Congratulations! ");
-			System.out.println("You successfully signed up. ");
+			System.out.println("You are Accepted. ");
 
 		}
 

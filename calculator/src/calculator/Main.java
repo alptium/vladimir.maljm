@@ -3,20 +3,18 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		int firstNumber;
-		int secondNumber;
+		
 		int result = 0;
-				
 		try(Scanner sc = new Scanner(System.in)) {
 					
-		System.out.println("Enter your first number");
-		firstNumber = sc.nextInt();
-					
-		System.out.println("Choose your operation +, -, * ,/ ");
-		String operation = sc.next();
-					
-		System.out.println("Enter your second number");
-		secondNumber = sc.nextInt();
+			System.out.println("Enter your first number");
+			int firstNumber = sc.nextInt();
+						
+			System.out.println("Choose your operation +, -, * ,/ ");
+			String operation = sc.next();
+						
+			System.out.println("Enter your second number");
+			int secondNumber = sc.nextInt();
 					
 			if (operation.equals("/") && secondNumber == 0) {				
 				System.out.println("Divide with 0 (zero) can't be calculated.");
@@ -38,5 +36,4 @@ public class Main {
 		System.out.println("The result for " + firstNumber + " " + operation + " " + secondNumber + " is " + result);
 		}
 	}
-
 }

@@ -15,7 +15,7 @@ public class Main {
 				students = new String[numberOfStudents];
 				grades = new int[numberOfStudents];
 				
-				for(int i = 0 ; i < numberOfStudents; i++){ 
+				for(int i = 0 ; i < numberOfStudents; i++) { 
 			
 					int k = i + 1; //zato sto brojac "i" pocinje od nule a brojac "k" treba da oznacava broj studenata kojih ima vise od nula
 			
@@ -26,7 +26,7 @@ public class Main {
 					grades[i]= sc.nextInt();
 				}
 				
-				for(int i = 0 ; i < numberOfStudents; i++){ 
+				for(int i = 0 ; i < numberOfStudents; i++) { 
 					
 					System.out.println("Student " + students[i] + " " + " has grade " + grades[i]);
 					totalGrade += grades[i];
@@ -34,7 +34,6 @@ public class Main {
 				double averageGrade = totalGrade / numberOfStudents;
 				System.out.println("Total grade of your students is: " + totalGrade);
 				System.out.println("Average grade of your students is: " + averageGrade);
-			}
+		}
 	}
-
 }

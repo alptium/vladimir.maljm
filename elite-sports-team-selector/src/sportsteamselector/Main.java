@@ -59,26 +59,19 @@ public class Main {
 					
 					if (gunNo == 1) {
 						System.out.println( name + " your tactical position is OFFENCE. ");
-					}
-					
-					else if (gunNo == 2) {
+					} else if (gunNo == 2) {
 						System.out.println(name + " your tactical position is SUPORT. ");
-					}
-					
-					else if (gunNo == 3) {
+					} else if (gunNo == 3) {
 						System.out.println(name + " your tactical position is DEFENSE. ");
 					}
 					
-				}
-				else if (age > 35 && age <= 65 && teamPlayer.equalsIgnoreCase("N") || teamPlayer.equalsIgnoreCase("Y")) {
+				} else if (age > 35 && age <= 65 && teamPlayer.equalsIgnoreCase("N") || teamPlayer.equalsIgnoreCase("Y")) {
 					System.out.println("You can play with (1)" + gun1 + "and (2)" + gun2 + ". Choose ONE of the offered ones: ");
 					int gunNo= sc.nextInt();
 					
 					if (gunNo == 1) {
 						System.out.println(name + " your tactical position is Commander. ");
-					}
-					
-					else if (gunNo == 2) {
+					} else if (gunNo == 2) {
 						System.out.println(name + " your tactical position is Deputy Commander. ");
 					}
 				}

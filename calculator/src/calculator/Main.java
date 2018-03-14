@@ -20,20 +20,16 @@ public class Main {
 				System.out.println("Divide with 0 (zero) can't be calculated.");
 				System.out.println("Enter your second number again: ");
 				secondNumber = sc.nextInt();
-			}
-			else if(operation.equals("+")) {
+			} else if(operation.equals("+")) {
 				result = firstNumber + secondNumber;
-			} 
-			else if(operation.equals("-")) {
+			} else if(operation.equals("-")) {
 				result = firstNumber - secondNumber;
-			} 
-			else if(operation.equals("*")) {
+			} else if(operation.equals("*")) {
 				result = firstNumber * secondNumber;		
-			} 
-			else if(operation.equals("/")) {
+			} else if(operation.equals("/")) {
 				result = firstNumber / secondNumber;			
 			}
-		System.out.println("The result for " + firstNumber + " " + operation + " " + secondNumber + " is " + result);
+			System.out.println("The result for " + firstNumber + " " + operation + " " + secondNumber + " is " + result);
 		}
 	}
 }

@@ -5,22 +5,23 @@ public class Client {
 	private String firstName;
 	private String lastName;
 	private int birthDate;
-	private int birthMounth;
+	private int birthMonth;
 	private int birthYear;
 	private String jmbg;
-	private String specialization;
-	private int licenceID;
+	private String maritalStatus;
+	private String employementStatus;
+	
 		
-	public Client (String firstName, String lastName, int birthDate, int birthMounth, int birthYear, String jmbg, String specialization, int licenceID) {
+	public Client (String firstName, String lastName, int birthDate, int birthMounth, int birthYear, String jmbg, String maritalStatus,String employementStatus) {
 		
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthDate = birthDate;
-		this.birthMounth = birthMounth;
+		this.birthMonth = birthMounth;
 		this.birthYear = birthYear;
 		this.jmbg = jmbg;
-		this.specialization = specialization;
-		this.licenceID = licenceID;
+		this.maritalStatus = maritalStatus;
+		this.employementStatus = employementStatus;
 	}
 		
 		public String getfirstName() {
@@ -35,8 +36,8 @@ public class Client {
 			return birthDate;
 		}
 		
-		public int getbirthMounth() {
-			return birthMounth;
+		public int getbirthMonth() {
+			return birthMonth;
 		}
 		
 		public int getbirthYear() {
@@ -47,12 +48,14 @@ public class Client {
 			return jmbg;
 		}
 		
-		public String getspecialization() {
-			return specialization;
+		public String getmaritalStatus() {
+			return maritalStatus;
 		}
 		
-		public int getlicenceID() {
-			return licenceID;
+		public String getemployementStatus() {
+			return employementStatus;
 		}
+		
+		
 }
 

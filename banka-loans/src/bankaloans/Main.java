@@ -29,10 +29,42 @@ public class Main {
 	
 	private static void runDemoAddClient() {
 		
+		try(Scanner sc = new Scanner(System.in)) {
+		
+		System.out.println("Enter client name: ");
+		String firstName = sc.next();
+		
+		System.out.println("Enter client surname: ");
+		String secondName = sc.next();
+		
+		System.out.println("Enter client birth date : ");
+		int birthDate = sc.nextInt();
+		
+		System.out.println("Enter client birth month : ");
+		int birthMonth = sc.nextInt();
+		
+		System.out.println("Enter client birth year : ");
+		int birthYear = sc.nextInt();
+		
+		System.out.println("Enter client JMBG: ");
+		String jmbg = sc.next();
+		
+		System.out.println("Enter client marital status: ");
+		String maritalStatus = sc.next();
+		
+		System.out.println("Enter client employement status: ");
+		String employementStatus = sc.next();
+		
+		Client client = new Client (firstName, secondName, birthDate, birthMonth, birthYear, jmbg, maritalStatus, employementStatus); 
+	
+		}
 	}
 	
 	private static void runDemoAddLoan() {
 		
+		try(Scanner sc = new Scanner(System.in)) {
+			
+		}
 	}
 
 }

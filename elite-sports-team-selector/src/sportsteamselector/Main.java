@@ -32,7 +32,7 @@ public class Main {
 				System.out.println("Do you have a diopter? Y/N ");
 				String diopter= sc.next();
 				
-				if (diopter.equalsIgnoreCase("Y") /*|| diopter.equals("y")*/) {
+				if (diopter.equalsIgnoreCase("Y")) {
 					System.out.println("Please enter your dioptre: ");
 					double diopterValue = sc.nextDouble();
 					
@@ -45,7 +45,7 @@ public class Main {
 				System.out.println("Do you have some heart problems? Y/N ");
 				String heartProblems= sc.next();
 				
-				if ( heartProblems.equalsIgnoreCase("Y") /*|| heartProblems.equals("y")*/) {
+				if ( heartProblems.equalsIgnoreCase("Y")) {
 					System.out.println("We are sorry. This game is not allowed to play people with heart problems. ");
 					return;
 				}
@@ -82,7 +82,7 @@ public class Main {
 						System.out.println(name + " your tactical position is Deputy Commander. ");
 					}
 				}
-				System.out.println("Congratulations! ");
+				System.out.println("Congratulations! " + name + surname);
 				System.out.println("You are Accepted. ");
 				
 				if(JOptionPane.showInputDialog("Do you want to add more people? Y/N ").equalsIgnoreCase("N")) {

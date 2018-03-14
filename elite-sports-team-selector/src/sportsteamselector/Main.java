@@ -75,7 +75,7 @@ public class Main {
 						System.out.println(name + " your tactical position is Deputy Commander. ");
 					}
 				}
-				System.out.println("Congratulations! " + name + surname);
+				System.out.println("Congratulations " + name + " " + surname + " !");
 				System.out.println("You are Accepted. ");
 				
 				if(JOptionPane.showInputDialog("Do you want to add more people? Y/N ").equalsIgnoreCase("N")) {

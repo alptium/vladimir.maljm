@@ -9,10 +9,16 @@ public class Main {
 					
 			System.out.println("Enter your first number");
 			int firstNumber = sc.nextInt();
-						
-			System.out.println("Choose your operation +, -, * ,/ ");
-			String operation = sc.next();
-						
+			
+
+				System.out.println("Choose your operation +, -, * ,/ ");
+				String operation = sc.next();
+				if (operation !=  "+" || operation !=  "-" || operation !=  "*" || operation !=  "/") {
+					System.out.println("You enter wrong operation, please enter it again ");
+					String operation1 = sc.next();
+					operation = operation1;
+				}
+				
 			System.out.println("Enter your second number");
 			int secondNumber = sc.nextInt();
 					

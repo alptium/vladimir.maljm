@@ -9,51 +9,44 @@ public class Loan {
 	private int nomInterestRate;
 	private int montlyAnnuity;
 	private int bankFee;
-	private String employementStatus;
 	
-		
-	public Loan (String loanName, String lastName, int birthDate, int birthMounth, int birthYear, String jmbg, String maritalStatus,String employementStatus) {
+	public Loan (String loanName, int loanID, int loanAmount, int loanPeriod, int nomInterestRate, int montlyAnnuity, int bankFee ) {
 		
 		this.loanName = loanName;
 		this.loanID = loanID;
 		this.loanAmount = loanAmount;
 		this.loanPeriod = loanPeriod;
-		this.nomInterestRate = birthYear;
-		this.montlyAnnuity = jmbg;
-		this.bankFee = maritalStatus;
-		this.employementStatus = employementStatus;
+		this.nomInterestRate = nomInterestRate;
+		this.montlyAnnuity = montlyAnnuity;
+		this.bankFee = bankFee;
 	}
 		
-		public String getfirstName() {
+		public String getloanName() {
 			return loanName;
 		}
 		
-		public String getLastName() {
+		public int getloanID() {
 			return loanID;
 		}
 		
-		public int getbirthDate() {
+		public int getloanAmount() {
 			return loanAmount;
 		}
 		
-		public int getbirthMonth() {
+		public int getloanPeriod() {
 			return loanPeriod;
 		}
 		
-		public int getbirthYear() {
+		public int getnomInterestRate() {
 			return nomInterestRate;
 		}
 		
-		public String getjmbg() {
+		public int getmontlyAnnuity() {
 			return montlyAnnuity;
 		}
 		
-		public String getmaritalStatus() {
+		public int getbankFee() {
 			return bankFee;
-		}
-		
-		public String getemployementStatus() {
-			return employementStatus;
 		}
 		
 		

@@ -46,8 +46,17 @@ public class Main {
 		System.out.println("Enter client birth year : ");
 		int birthYear = sc.nextInt();
 		
-		System.out.println("Enter client JMBG: ");
+		System.out.println("Please enter client JMBG: ");
 		String jmbg = sc.next();
+		int jmbgLength = jmbg.length();
+		
+		if (jmbgLength != 13) {
+		
+			System.out.println("You entered wrong JMBG number!");
+			System.out.println("Please try again.");
+			String jmbg1 = sc.next();
+			jmbg = jmbg1;
+		}
 		
 		System.out.println("Enter client marital status: ");
 		String maritalStatus = sc.next();

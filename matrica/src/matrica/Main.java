@@ -12,7 +12,7 @@ public class Main {
 		System.out.println("Unesi broj kolona matrice: ");
 		int kolona = sc.nextInt();
 		
-		int matrica[][] = new int[red][kolona];		//definisanje niza
+		int matrica[][] = new int[red][kolona];		//definisanje niza /matrice
 		
 		for(int i = 0; i < red; i++) {			//petlja u kojoj se unose clanovi matrice
 			for(int j = 0; j < kolona; j++) {

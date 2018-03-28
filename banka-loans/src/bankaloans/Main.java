@@ -13,63 +13,66 @@ public class Main {
 			String a1= sc.next().substring(0, 1);
 			
 			if ( a1.equalsIgnoreCase("y") ) {
-				runDemoAddClient();
+				runAddClient();
 			}
 			else if (a1.equalsIgnoreCase("n") ) {
 				System.out.println("Do you want to add new loan? (Y/N) ");
 				String a2= sc.next().substring(0, 1);
 				
 				if ( a2.equalsIgnoreCase("y") ) {
-					runDemoAddLoan();
+					runAddLoan();
 				}
 			}
 		}
 	}
 
 	
-	private static void runDemoAddClient() {
+	private static void runAddClient() {
+		
+		Client client = new Client (/*firstName, secondName, birthDate, birthMonth, birthYear, jmbg, maritalStatus, employementStatus*/);
+		
 		
 		try(Scanner sc = new Scanner(System.in)) {
 		
 		System.out.println("Enter client name: ");
-		String firstName = sc.next();
+		client.setfirstName(sc.next());
 		
 		System.out.println("Enter client surname: ");
-		String secondName = sc.next();
+		client.setlastName(sc.next());
 		
 		System.out.println("Enter client birth date : ");
-		int birthDate = sc.nextInt();
+		client.setbirthDate(sc.nextInt());
 		
 		System.out.println("Enter client birth month : ");
-		int birthMonth = sc.nextInt();
+		client.setbirthMonth(sc.nextInt());
 		
 		System.out.println("Enter client birth year : ");
-		int birthYear = sc.nextInt();
+		client.setbirthYear(sc.nextInt());
 		
 		System.out.println("Please enter client JMBG: ");
-		String jmbg = sc.next();
-		int jmbgLength = jmbg.length();
+		client.setjmbg(sc.next());
+		int jmbgLength = client.getjmbg().length();
 		
 		if (jmbgLength != 13) {
 		
 			System.out.println("You entered wrong JMBG number!");
 			System.out.println("Please try again.");
-			String jmbg1 = sc.next();
-			jmbg = jmbg1;
+			client.setjmbg(sc.next());
 		}
 		
-		System.out.println("Enter client marital status: ");
-		String maritalStatus = sc.next();
+		System.out.println("Enter client marital status: (Married / Not married) ");
+		client.setmaritalStatus(sc.next().substring(0, 1));
 		
-		System.out.println("Enter client employement status: ");
-		String employementStatus = sc.next();
+		System.out.println("Enter client employement status: (Employed / Unemployed)");
+		client.setemployementStatus(sc.next().substring(0, 1));
 		
-		Client client = new Client (firstName, secondName, birthDate, birthMonth, birthYear, jmbg, maritalStatus, employementStatus); 
-	
+		 
+		
+		System.out.println(client);
 		}
 	}
 	
-	private static void runDemoAddLoan() {
+	private static void runAddLoan() {
 		
 		try(Scanner sc = new Scanner(System.in)) {
 			

@@ -12,14 +12,14 @@ public class Main {
 			System.out.println("Do you want to add new client? (Y/N) ");
 			String a1= sc.next().substring(0, 1);
 			
-			if ( a1.equalsIgnoreCase("y") ) {
+			if(a1.equalsIgnoreCase("y") ) {
 				runAddClient();
 			}
-			else if (a1.equalsIgnoreCase("n") ) {
+			else if(a1.equalsIgnoreCase("n") ) {
 				System.out.println("Do you want to add new loan? (Y/N) ");
 				String a2= sc.next().substring(0, 1);
 				
-				if ( a2.equalsIgnoreCase("y") ) {
+				if(a2.equalsIgnoreCase("y")) {
 					runAddLoan();
 				}
 			}
@@ -30,7 +30,6 @@ public class Main {
 	private static void runAddClient() {
 		
 		Client client = new Client (/*firstName, secondName, birthDate, birthMonth, birthYear, jmbg, maritalStatus, employementStatus*/);
-		
 		
 		try(Scanner sc = new Scanner(System.in)) {
 		
@@ -53,8 +52,7 @@ public class Main {
 		client.setjmbg(sc.next());
 		int jmbgLength = client.getjmbg().length();
 		
-		if (jmbgLength != 13) {
-		
+		if(jmbgLength != 13) {
 			System.out.println("You entered wrong JMBG number!");
 			System.out.println("Please try again.");
 			client.setjmbg(sc.next());

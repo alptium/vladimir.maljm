@@ -39,6 +39,7 @@ public class Main {
             }
             System.out.println();
         }
+		System.out.println();
 		
 		for (int i = 0; i < red; i++) {			// petlja u kojoj se ispisuju nule iznad glavne dijagonale
             for (int j = 0; j < kolona; j++) {
@@ -50,6 +51,7 @@ public class Main {
             System.out.println();
         
 		}
+		System.out.println();
 		
 		for (int i = 0; i < red; i++) {			// petlja u kojoj se ispisuju nule ispod g;avne dijagonale
             for (int j = 0; j < kolona; j++) {

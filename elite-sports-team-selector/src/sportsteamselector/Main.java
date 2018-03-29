@@ -24,7 +24,7 @@ public class Main {
 				System.out.println("Enter your age: ");
 				int age= sc.nextInt();
 				
-				if (age < 18) {
+				if(age < 18) {
 					System.out.println( name + " you are young for this game. ");
 					return;
 				}
@@ -32,11 +32,11 @@ public class Main {
 				System.out.println("Do you have a diopter? Y/N ");
 				String diopter= sc.next();
 				
-				if (diopter.equalsIgnoreCase("Y")) {
+				if(diopter.equalsIgnoreCase("Y")) {
 					System.out.println("Please enter your dioptre: ");
 					double diopterValue = sc.nextDouble();
 					
-					if (diopterValue >= 0.5 ) {
+					if(diopterValue >= 0.5) {
 						System.out.println("We are sorry, you are not fulfilling criteria, your dioptre is to large. ");
 						return;
 					}
@@ -45,7 +45,7 @@ public class Main {
 				System.out.println("Do you have some heart problems? Y/N ");
 				String heartProblems= sc.next();
 				
-				if ( heartProblems.equalsIgnoreCase("Y")) {
+				if(heartProblems.equalsIgnoreCase("Y")) {
 					System.out.println("We are sorry. This game is not allowed to play people with heart problems. ");
 					return;
 				}
@@ -53,25 +53,25 @@ public class Main {
 				System.out.println("Are you a team player? Y/N ");
 				String teamPlayer= sc.next();
 				
-				if (age >= 18 && age <= 35 && teamPlayer.equalsIgnoreCase("N") || teamPlayer.equalsIgnoreCase("Y")) {
+				if(age >= 18 && age <= 35 && teamPlayer.equalsIgnoreCase("N") || teamPlayer.equalsIgnoreCase("Y")) {
 					System.out.println("You can play with (1)" + gun1 + ", (2)" + gun2 + " and (3)" + gun3 + ". Choose ONE of the offered ones: ");
 					int gunNo= sc.nextInt();
 					
-					if (gunNo == 1) {
+					if(gunNo == 1) {
 						System.out.println( name + " your tactical position is OFFENCE. ");
-					} else if (gunNo == 2) {
+					} else if(gunNo == 2) {
 						System.out.println(name + " your tactical position is SUPORT. ");
-					} else if (gunNo == 3) {
+					} else if(gunNo == 3) {
 						System.out.println(name + " your tactical position is DEFENSE. ");
 					}
 					
-				} else if (age > 35 && age <= 65 && teamPlayer.equalsIgnoreCase("N") || teamPlayer.equalsIgnoreCase("Y")) {
+				} else if(age > 35 && age <= 65 && teamPlayer.equalsIgnoreCase("N") || teamPlayer.equalsIgnoreCase("Y")) {
 					System.out.println("You can play with (1)" + gun1 + "and (2)" + gun2 + ". Choose ONE of the offered ones: ");
 					int gunNo= sc.nextInt();
 					
-					if (gunNo == 1) {
+					if(gunNo == 1) {
 						System.out.println(name + " your tactical position is Commander. ");
-					} else if (gunNo == 2) {
+					} else if(gunNo == 2) {
 						System.out.println(name + " your tactical position is Deputy Commander. ");
 					}
 				}

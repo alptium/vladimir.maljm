@@ -20,13 +20,13 @@ public class Main {
 				for(int i = 0 ; i < numberOfStudents; i++) { 
 			
 					int k = i + 1; //zato sto brojac "i" pocinje od nule a brojac "k" treba da oznacava broj studenata kojih ima vise od nula
-			
+					
 					System.out.println("Enter the name of your " + k + ". student: ");
 					studentsName[i] = sc.next();
 					
 					System.out.println("Enter the surname of your " + k + ". student: ");
 					studentsSurname[i] = sc.next();
-			
+					
 					System.out.println("Enter his grade: ");
 					grades[i]= sc.nextInt();
 				}

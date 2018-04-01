@@ -28,45 +28,43 @@ public class Main {
 
 	
 	private static void runAddClient() {
-		
-		Client client = new Client (/*firstName, secondName, birthDate, birthMonth, birthYear, jmbg, maritalStatus, employementStatus*/);
-		
-		try(Scanner sc = new Scanner(System.in)) {
-		
-		System.out.println("Enter client name: ");
-		client.setfirstName(sc.next());
-		
-		System.out.println("Enter client surname: ");
-		client.setlastName(sc.next());
-		
-		System.out.println("Enter client birth date : ");
-		client.setbirthDate(sc.nextInt());
-		
-		System.out.println("Enter client birth month : ");
-		client.setbirthMonth(sc.nextInt());
-		
-		System.out.println("Enter client birth year : ");
-		client.setbirthYear(sc.nextInt());
-		
-		System.out.println("Please enter client JMBG: ");
-		client.setjmbg(sc.next());
-		int jmbgLength = client.getjmbg().length();
-		
-		if(jmbgLength != 13) {
-			System.out.println("You entered wrong JMBG number!");
-			System.out.println("Please try again.");
-			client.setjmbg(sc.next());
-		}
-		
-		System.out.println("Enter client marital status: (Married / Not married) ");
-		client.setmaritalStatus(sc.next().substring(0, 1));
-		
-		System.out.println("Enter client employement status: (Employed / Unemployed)");
-		client.setemployementStatus(sc.next().substring(0, 1));
-		
-		 
-		
-		System.out.println(client);
+		while(true) {	
+			Client client = new Client (/*firstName, secondName, birthDate, birthMonth, birthYear, jmbg, maritalStatus, employementStatus*/);
+			
+			try(Scanner sc = new Scanner(System.in)) {
+			
+			System.out.println("Enter client name: ");
+			client.setfirstName(sc.next());
+			
+			System.out.println("Enter client surname: ");
+			client.setlastName(sc.next());
+			
+			System.out.println("Enter client birth date : ");
+			client.setbirthDate(sc.nextInt());
+			
+			System.out.println("Enter client birth month : ");
+			client.setbirthMonth(sc.nextInt());
+			
+			System.out.println("Enter client birth year : ");
+			client.setbirthYear(sc.nextInt());
+					
+			do { 
+				System.out.println("Please enter client JMBG: ");
+				client.setjmbg(sc.next());
+			} while(client.getjmbg().length() != 13);
+			
+			System.out.println("Enter client marital status: (Married / Not married) ");
+			client.setmaritalStatus(sc.next().substring(0, 1));
+			
+			System.out.println("Enter client employement status: (Employed / Unemployed)");
+			client.setemployementStatus(sc.next().substring(0, 1));
+			
+			System.out.println("Do you want to add more clients? (Y/N)");
+			String a1 = sc.next();
+			if(a1.equalsIgnoreCase("y")) {
+				continue;
+			}
+			}
 		}
 	}
 	

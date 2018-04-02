@@ -1,7 +1,10 @@
 package bankaloans;
-import java.util.Scanner;
-public class Main {
 
+import java.util.Scanner;
+import javafx.*;
+
+public class Main {
+	
 	public static void main(String[] args) {
 		System.out.println("==============*==============");
 		System.out.println("Select the operation you want ");
@@ -12,10 +15,10 @@ public class Main {
 			System.out.println("Do you want to add new client? (Y/N) ");
 			String a1= sc.next().substring(0, 1);
 			
-			if(a1.equalsIgnoreCase("y") ) {
+			if(a1.equalsIgnoreCase("y")) {
 				runAddClient();
 			}
-			else if(a1.equalsIgnoreCase("n") ) {
+			else if(a1.equalsIgnoreCase("n")) {
 				System.out.println("Do you want to add new loan? (Y/N) ");
 				String a2= sc.next().substring(0, 1);
 				
@@ -71,6 +74,29 @@ public class Main {
 	private static void runAddLoan() {
 		
 		try(Scanner sc = new Scanner(System.in)) {
+			
+			Loan loan = new Loan();
+			
+			System.out.println("Enter loan name: ");
+			loan.setLoanName(sc.next());
+			
+			System.out.println("Enter loan ID: ");
+			loan.setLoanID(sc.nextInt());
+			
+			System.out.println("Enter loan amount: ");
+			loan.setLoanAmount(sc.nextInt());
+			
+			System.out.println("Enter loan period: ");
+			loan.setLoanPeriod(sc.nextInt());
+			
+			System.out.println("Enter nominal interest rate: ");
+			loan.setNomInterestRate(sc.nextInt());
+			
+			System.out.println("Enter montly annuity: ");
+			loan.setLoanAmount(sc.nextInt());
+			
+			System.out.println("Enter bank fee: ");
+			loan.setBankFee(sc.nextInt());
 			
 		}
 	}

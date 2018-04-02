@@ -10,14 +10,14 @@ public class Loan {
 	private int montlyAnnuity;
 	private int bankFee;
 	
-	public Loan (String loanName, int loanID, int loanAmount, int loanPeriod, int nomInterestRate, int montlyAnnuity, int bankFee ) {
-		this.loanName = loanName;
+	public Loan (/*String loanName, int loanID, int loanAmount, int loanPeriod, int nomInterestRate, int montlyAnnuity, int bankFee*/) {
+		/*this.loanName = loanName;
 		this.loanID = loanID;
 		this.loanAmount = loanAmount;
 		this.loanPeriod = loanPeriod;
 		this.nomInterestRate = nomInterestRate;
 		this.montlyAnnuity = montlyAnnuity;
-		this.bankFee = bankFee;
+		this.bankFee = bankFee;*/
 	}
 		
 		public String getloanName() {

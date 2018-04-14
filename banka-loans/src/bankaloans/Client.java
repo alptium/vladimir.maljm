@@ -12,7 +12,7 @@ public class Client {
 	private String employementStatus;
 	
 		
-	/*public Client (String firstName, String lastName, int birthDate, int birthMounth, int birthYear, String jmbg, String maritalStatus,String employementStatus) {
+	public Client (String firstName, String lastName, int birthDate, int birthMounth, int birthYear, String jmbg, String maritalStatus,String employementStatus) {
 		
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -22,7 +22,7 @@ public class Client {
 		this.jmbg = jmbg;
 		this.maritalStatus = maritalStatus;
 		this.employementStatus = employementStatus;
-	}*/
+	}
 		
 		public String getfirstName() {
 			return firstName;

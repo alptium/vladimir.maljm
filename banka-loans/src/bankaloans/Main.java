@@ -1,7 +1,9 @@
 package bankaloans;
 
 import java.util.Scanner;
-import javafx.*;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class Main {
 	
@@ -12,18 +14,20 @@ public class Main {
 		
 		try(Scanner sc = new Scanner(System.in)) {
 			
-			System.out.println("Do you want to add new client? (Y/N) ");
+			System.out.println("Do you want to add new client? (Yes/No) ");
 			String a1= sc.next().substring(0, 1);
 			
 			if(a1.equalsIgnoreCase("y")) {
 				runAddClient();
-			}
-			else if(a1.equalsIgnoreCase("n")) {
-				System.out.println("Do you want to add new loan? (Y/N) ");
+			} else if(a1.equalsIgnoreCase("n")) {
+				
+				System.out.println("Do you want to add new loan? (Yes/No) ");
 				String a2= sc.next().substring(0, 1);
 				
 				if(a2.equalsIgnoreCase("y")) {
 					runAddLoan();
+				} else {
+					runLoanSelect();
 				}
 			}
 		}
@@ -31,72 +35,91 @@ public class Main {
 
 	
 	private static void runAddClient() {
-		while(true) {	
-			Client client = new Client (/*firstName, secondName, birthDate, birthMonth, birthYear, jmbg, maritalStatus, employementStatus*/);
+		while(true) {
+			
+			DateTimeFormatter date = DateTimeFormatter.ofPattern("yyyy");
+			LocalDateTime now = LocalDateTime.now();
+			int dateNow = Integer.parseInt(date.format(now));
+			int age = 0;
 			
 			try(Scanner sc = new Scanner(System.in)) {
 			
 			System.out.println("Enter client name: ");
-			client.setfirstName(sc.next());
+			String firstName = sc.next();
 			
 			System.out.println("Enter client surname: ");
-			client.setlastName(sc.next());
+			String lastName = sc.next();
 			
 			System.out.println("Enter client birth date : ");
-			client.setbirthDate(sc.nextInt());
+			int birthDate = sc.nextInt();
 			
 			System.out.println("Enter client birth month : ");
-			client.setbirthMonth(sc.nextInt());
+			int birthMonth = sc.nextInt();
 			
 			System.out.println("Enter client birth year : ");
-			client.setbirthYear(sc.nextInt());
+			int birthYear = sc.nextInt();
+			age = dateNow - birthYear;
+			
+			System.out.println("Please enter client JMBG: ");
+			String jmbg = sc.next();
 					
-			do { 
-				System.out.println("Please enter client JMBG: ");
-				client.setjmbg(sc.next());
-			} while(client.getjmbg().length() != 13);
+			while(jmbg.length() != 13) { 
+				System.out.println("Please enter VALID client JMBG: ");
+				jmbg = sc.next();
+			}
 			
 			System.out.println("Enter client marital status: (Married / Not married) ");
-			client.setmaritalStatus(sc.next().substring(0, 1));
+			String maritalStatus = sc.next().substring(0, 1);
 			
 			System.out.println("Enter client employement status: (Employed / Unemployed)");
-			client.setemployementStatus(sc.next().substring(0, 1));
+			String employementStatus = sc.next().substring(0, 1);
 			
-			System.out.println("Do you want to add more clients? (Y/N)");
-			String a1 = sc.next();
+			Client client = new Client (firstName, lastName, birthDate, birthMonth, birthYear, jmbg, maritalStatus, employementStatus);
+			
+			System.out.println("Do you want to add more clients? (Yes/No)");
+			String a1= sc.next().substring(0, 1);
 			if(a1.equalsIgnoreCase("y")) {
 				continue;
 			}
+			
 			}
 		}
+	}
+	
+	private static void runLoanSelect() {
+		
+		ArrayList<Client> listApproved = new ArrayList<>();
+		ArrayList<Client> listNotApproved = new ArrayList<>();
+		
 	}
 	
 	private static void runAddLoan() {
 		
 		try(Scanner sc = new Scanner(System.in)) {
 			
-			Loan loan = new Loan();
 			
 			System.out.println("Enter loan name: ");
-			loan.setLoanName(sc.next());
+			String loanName = sc.next();
 			
 			System.out.println("Enter loan ID: ");
-			loan.setLoanID(sc.nextInt());
+			int loanID = sc.nextInt();
 			
 			System.out.println("Enter loan amount: ");
-			loan.setLoanAmount(sc.nextInt());
+			int loanAmount = sc.nextInt();
 			
 			System.out.println("Enter loan period: ");
-			loan.setLoanPeriod(sc.nextInt());
+			int loanPeriod = sc.nextInt();
 			
 			System.out.println("Enter nominal interest rate: ");
-			loan.setNomInterestRate(sc.nextInt());
+			int nomInterestRate = sc.nextInt();
 			
 			System.out.println("Enter montly annuity: ");
-			loan.setLoanAmount(sc.nextInt());
+			int montlyAnnuity = sc.nextInt();
 			
 			System.out.println("Enter bank fee: ");
-			loan.setBankFee(sc.nextInt());
+			int bankFee = sc.nextInt();
+			
+			Loan loan = new Loan (loanName, loanID, loanAmount, loanPeriod, nomInterestRate, montlyAnnuity, bankFee);
 			
 		}
 	}

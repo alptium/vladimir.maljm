@@ -16,7 +16,7 @@ public class Main {
 		
 		for(int i = 0; i < red; i++) {			//petlja u kojoj se unose clanovi matrice
 			for(int j = 0; j < kolona; j++) {
-				System.out.println("X [" + i + "," + j + "] ---> ");
+				System.out.println("X [" + i + "," + j + "]---> ");
 				matrica[i][j] = sc.nextInt();
 			}
 			System.out.println();
@@ -42,7 +42,7 @@ public class Main {
 		System.out.println();
 		
 		for (int i = 0; i < red; i++) {			// petlja u kojoj se ispisuju nule iznad glavne dijagonale
-            for (int j = 0; j < kolona; j++) {
+            for (int j = 1; j < kolona; j++) {
                 if (i < j) {
                 	matrica[i][j] = 0 ;
                 }

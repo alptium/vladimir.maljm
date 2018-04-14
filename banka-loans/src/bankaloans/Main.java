@@ -6,9 +6,9 @@ import javafx.*;
 public class Main {
 	
 	public static void main(String[] args) {
-		System.out.println("==============*==============");
+		System.out.println("==============*=============");
 		System.out.println("Select the operation you want ");
-		System.out.println("==============*==============");
+		System.out.println("==============*=============");
 		
 		try(Scanner sc = new Scanner(System.in)) {
 			

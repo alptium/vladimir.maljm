@@ -14,6 +14,22 @@ public class Main {
 		
 		try(Scanner sc = new Scanner(System.in)) {
 			
+			String loanName1 = "Cash loan";
+			int loanID1 = 01;
+			double loanAmount1 = 100000.00;
+			int loanPeriod1 = 24;
+			double nomInterestRate1 = 2.1;
+			double montlyAnnuity1 = 4166.66;
+			double bankFee1 = 100;
+			
+			String loanName2 = "Car loan";
+			int loanID2 = 02;
+			double loanAmount2 = 900000.00;
+			int loanPeriod2 = 48;
+			double nomInterestRate2 = 6.1;
+			double montlyAnnuity2 = 18750.00;
+			double bankFee2 = 1000;
+			
 			System.out.println("Do you want to add new client? (Yes/No) ");
 			String a1= sc.next().substring(0, 1);
 			
@@ -31,6 +47,8 @@ public class Main {
 				}
 			}
 		}
+		
+		
 	}
 
 	
@@ -76,10 +94,14 @@ public class Main {
 			
 			Client client = new Client (firstName, lastName, birthDate, birthMonth, birthYear, jmbg, maritalStatus, employementStatus);
 			
+			System.out.println("W");
+			
 			System.out.println("Do you want to add more clients? (Yes/No)");
 			String a1= sc.next().substring(0, 1);
 			if(a1.equalsIgnoreCase("y")) {
 				continue;
+			} else {
+				break;
 			}
 			
 			}
@@ -105,19 +127,19 @@ public class Main {
 			int loanID = sc.nextInt();
 			
 			System.out.println("Enter loan amount: ");
-			int loanAmount = sc.nextInt();
+			double loanAmount = sc.nextDouble();
 			
 			System.out.println("Enter loan period: ");
 			int loanPeriod = sc.nextInt();
 			
 			System.out.println("Enter nominal interest rate: ");
-			int nomInterestRate = sc.nextInt();
+			double nomInterestRate = sc.nextDouble();
 			
 			System.out.println("Enter montly annuity: ");
-			int montlyAnnuity = sc.nextInt();
+			double montlyAnnuity = sc.nextDouble();
 			
 			System.out.println("Enter bank fee: ");
-			int bankFee = sc.nextInt();
+			double bankFee = sc.nextDouble();
 			
 			Loan loan = new Loan (loanName, loanID, loanAmount, loanPeriod, nomInterestRate, montlyAnnuity, bankFee);
 			

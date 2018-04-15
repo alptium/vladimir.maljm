@@ -4,13 +4,13 @@ public class Loan {
 	
 	private String loanName;
 	private int loanID;
-	private int loanAmount;
+	private double loanAmount;
 	private int loanPeriod;
-	private int nomInterestRate;
-	private int montlyAnnuity;
-	private int bankFee;
+	private double nomInterestRate;
+	private double montlyAnnuity;
+	private double bankFee;
 	
-	public Loan (String loanName, int loanID, int loanAmount, int loanPeriod, int nomInterestRate, int montlyAnnuity, int bankFee) {
+	public Loan (String loanName, int loanID, double loanAmount, int loanPeriod, double nomInterestRate, double montlyAnnuity, double bankFee) {
 		this.loanName = loanName;
 		this.loanID = loanID;
 		this.loanAmount = loanAmount;
@@ -36,7 +36,7 @@ public class Loan {
 			this.loanID = loanID;
 		}
 		
-		public int getloanAmount() {
+		public double getloanAmount() {
 			return loanAmount;
 		}
 		
@@ -52,7 +52,7 @@ public class Loan {
 			this.loanPeriod = loanPeriod;
 		}
 		
-		public int getnomInterestRate() {
+		public double getnomInterestRate() {
 			return nomInterestRate;
 		}
 		
@@ -60,7 +60,7 @@ public class Loan {
 			this.nomInterestRate = nomInterestRate;
 		}
 		
-		public int getmontlyAnnuity() {
+		public double getmontlyAnnuity() {
 			return montlyAnnuity;
 		}
 		
@@ -68,7 +68,7 @@ public class Loan {
 			this.montlyAnnuity = montlyAnnuity;
 		}
 		
-		public int getbankFee() {
+		public double getbankFee() {
 			return bankFee;
 		}
 		

@@ -8,9 +8,9 @@ import java.util.ArrayList;
 public class Main {
 	
 	public static void main(String[] args) {
-		System.out.println("==============*=============");
+		System.out.println("=============================================");
 		System.out.println("Select the operation you want ");
-		System.out.println("==============*=============");
+		System.out.println("=============================================");
 		
 		try(Scanner sc = new Scanner(System.in)) {
 			
@@ -43,7 +43,7 @@ public class Main {
 				if(a2.equalsIgnoreCase("y")) {
 					runAddLoan();
 				} else {
-					runLoanSelect();
+					loanAplication();
 				}
 			}
 		}
@@ -108,10 +108,10 @@ public class Main {
 		}
 	}
 	
-	private static void runLoanSelect() {
+	private static void loanAplication() {
 		
-		ArrayList<Client> listApproved = new ArrayList<>();
-		ArrayList<Client> listNotApproved = new ArrayList<>();
+		//ArrayList<Client> approved = new ArrayList<>();
+		//ArrayList<Client> notApproved = new ArrayList<>();
 		
 	}
 	
